@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "43439a59b2c6a2cf",
+        "id": "0d7b78cc20c2dea4",
         "type": "tabs",
         "children": [
           {
-            "id": "479264e78ce3dddc",
+            "id": "25f837a9d4351872",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "tools/README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -169,8 +165,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "479264e78ce3dddc",
+  "active": "25f837a9d4351872",
   "lastOpenFiles": [
+    "tools/README.md",
+    "README.md",
+    "languages/Languages.md",
+    "tools/planed/GPG.md",
+    "tools/planed/Dots.md",
+    "tools/planed/ip-plan.md",
+    "tools/planed/Upgrading Shell.md",
+    "tools/planed/static-IP.md",
+    "tools/planed/partitioning.md",
+    "tools/planed/BackUp_Options.md",
+    "tools/planed/SSH-setup.md",
     "tools/planed/Shadow.Lab",
     "tools/planed/5_controling_vms.md",
     "tools/planed/4_QEMU_KVM.md",
@@ -180,24 +187,14 @@
     "tools/planed/Shadow.Lab/4_QEMU_KVM.md",
     "tools/planed/Shadow.Lab/3_need_to_have.md",
     "tools/GeneralSecurity-Tools.md",
-    "tools/README.md",
     "tools/BlueTeam-Tools.md",
     "tools/RedTeam-Tools.md",
     "tools/Starter-Tools.md",
-    "README.md",
     "Shadow.Lab/1_distros.md",
     "Shadow.Lab/2_distro_instalation.md",
     "Shadow.Lab/3_need_to_have.md",
     "SysAdmin/5_file_manipulation.md",
     "SysAdmin/6_file_manipulation.md",
-    "SysAdmin/4_file_system.md",
-    "SysAdmin/3_root.md",
-    "SysAdmin/1_cli.md",
-    "Yeet/Linux/partitioning.md",
-    "JOURNEY.md",
-    "PROGRESS_TRACKER.md",
-    "README.old.md",
-    "Yeet/Linux/static-IP.md",
     "Yeet/Linux",
     "Shadow.Lab/inventory/lazykvm.sh",
     "Shadow.Lab/inventory/kvm.sh",
