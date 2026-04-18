@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tools/VM-QOL.md",
+                "file": "tools/GeneralSecurity-Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "VM-QOL"
+              "title": "GeneralSecurity-Tools"
             }
           }
         ]
@@ -169,15 +169,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "5433c0565572f945",
+  "active": "25f837a9d4351872",
   "lastOpenFiles": [
+    "tools/QOL.md",
+    "tools/VM-QOL.md",
+    "tools/QOL-VM.md",
     "tools/GeneralSecurity-Tools.md",
     "tools/BlueTeam-Tools.md",
     "tools/planed/3_need_to_have.md",
     "tools/Qemu.md",
     "tools/VirtualBox_Arch.md",
     "tools/README.md",
-    "tools/VM-QOL.md",
     "README.md",
     "languages/Languages.md",
     "tools/planed/GPG.md",
@@ -197,8 +199,6 @@
     "tools/RedTeam-Tools.md",
     "tools/Starter-Tools.md",
     "Shadow.Lab/1_distros.md",
-    "Shadow.Lab/2_distro_instalation.md",
-    "Shadow.Lab/3_need_to_have.md",
     "Yeet/Linux",
     "Shadow.Lab/inventory/lazykvm.sh",
     "Shadow.Lab/inventory/kvm.sh",
