@@ -1,6 +1,6 @@
 # File Manipulation
 
-> **Previous:** [The Filesystem](Filesystem.md)
+> **Previous:** [The Filesystem](Filesystem.md) | **Next:** [CLI Tools](CLI-tools.md)
 
 Practical file operations: understanding timestamps, identifying file types, viewing content, and creating, copying, moving, and deleting files.
 
