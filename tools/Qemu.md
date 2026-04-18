@@ -110,9 +110,23 @@ sudo virsh net-autostart NAT
 
 ### Option B — Bridged LAN (LAN)
 
-VMs appear directly on the physical LAN. Useful for accessing VMs from other devices on the network.
+VMs attach directly to the physical LAN via an unmanaged switch. No DHCP is available on the network — every VM needs a static IP configured inside the guest OS.
+
+Reserved IP range for QEMU VMs: **`172.16.0.15 – 172.16.0.19`**
 
 > Replace `eth0` with your actual host interface (`ip link` to check).
+
+First, bridge the physical interface on the host:
+
+```bash
+sudo ip link add virbr20 type bridge
+sudo ip link set eth0 master virbr20
+sudo ip link set virbr20 up
+```
+
+To persist across reboots, add the bridge to your network manager config (e.g. systemd-networkd or NetworkManager).
+
+Then define the libvirt network:
 
 ```bash
 sudo vim /tmp/LAN.xml
@@ -123,11 +137,6 @@ sudo vim /tmp/LAN.xml
   <name>LAN</name>
   <forward mode='bridge'/>
   <bridge name='virbr20'/>
-  <ip address='172.16.0.1' netmask='255.255.255.0'>
-    <dhcp>
-      <range start='172.16.0.15' end='172.16.0.19'/>
-    </dhcp>
-  </ip>
 </network>
 ```
 
@@ -135,14 +144,30 @@ sudo vim /tmp/LAN.xml
 | ---------------- | --------------------------- |
 | Network name     | `LAN`                       |
 | Bridge interface | `virbr20`                   |
-| Gateway          | `172.16.0.1`                |
-| DHCP range       | `172.16.0.15 – 172.16.0.19` |
+| Reserved range   | `172.16.0.15 – 172.16.0.19` |
+| Gateway          | set on your router/host     |
 
 ```bash
 sudo virsh net-define /tmp/LAN.xml
 sudo virsh net-start LAN
 sudo virsh net-autostart LAN
 ```
+
+#### Setting a Static IP Inside a VM
+
+After creating a VM on the `LAN` network, configure the static IP inside the guest. Using `nmcli`:
+
+```bash
+# Run inside the VM guest
+nmcli con mod "Wired connection 1" \
+  ipv4.method manual \
+  ipv4.addresses 172.16.0.15/24 \
+  ipv4.gateway 172.16.0.1 \
+  ipv4.dns "1.1.1.1 8.8.8.8"
+nmcli con up "Wired connection 1"
+```
+
+Increment the last octet (`172.16.0.15`, `.16`, `.17`…) for each new VM. Keep a note of which IP is assigned to which VM to avoid conflicts within the reserved range.
 
 ---
 
