@@ -277,4 +277,4 @@ return {
 | ------------------------- | ------------------------------- |
 | Encrypt files and backups | [GPG](GPG.md)                   |
 | Back up your setup        | [Backups](BackUps.md)           |
-| Tune your VM              | [VM Quality of Life](QOL-VM.md) |
+| Tune your VM              | [VM Quality of Life](2.%20Tips%20for%20VM.md) |

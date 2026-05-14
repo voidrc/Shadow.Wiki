@@ -8,18 +8,6 @@ Shadow.Lab operates in the **Grey Hat** space — skilled researchers who unders
 
 ---
 
-## Start Here
-
-New to Shadow.Wiki or building your lab for the first time, follow this path:
-
-| Step | Guide                                           | What you'll do                                       |
-| ---- | ----------------------------------------------- | ---------------------------------------------------- |
-| 1    | [🛠️ Tools & Setup](Set-Up/README.md)            | Pick an OS, spin up a VM, install core tools         |
-| 2    | [🐧 Linux](linux/README.md)                     | Learn Linux fundamentals for easy use of prefered OS |
-| 3    | [💻 Programming Languages](languages/README.md) | Scripting foundations for exploit dev and tooling    |
-
----
-
 ## 🔘 Grey Hat Principles
 
 - **Understand both sides** — the best defenders think like attackers; the best attackers understand defenses

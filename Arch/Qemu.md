@@ -178,13 +178,3 @@ sudo virsh net-list --all
 sudo virsh net-info NAT
 sudo virsh net-info LAN
 ```
-
----
-
-## What to Read Next
-
-| You want to...                | Go here                                  |
-| ----------------------------- | ---------------------------------------- |
-| Prefer a GUI-based hypervisor | [VirtualBox on Arch](VirtualBox_Arch.md) |
-| Tune your VM after setup      | [VM Quality of Life](QOL-VM.md)          |
-| Browse the full security toolkit | [General Security Tools](GeneralSecurity-Tools.md) |

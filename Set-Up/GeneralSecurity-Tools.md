@@ -1,6 +1,6 @@
 ## General
 
-> **Previous:** [VM Quality of Life](QOL-VM.md)
+> **Previous:** [VM Quality of Life](2.%20Tips%20for%20VM.md)
 
 | Tool              | Purpose                                  | Install                                                       |
 | ----------------- | ---------------------------------------- | ------------------------------------------------------------- |

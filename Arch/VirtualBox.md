@@ -89,13 +89,3 @@ sudo VBoxManage extpack install Oracle_VirtualBox_Extension_Pack*.vbox-extpack
 ```bash
 sudo vboxmanage hostonlyif create
 ```
-
----
-
-## What to Read Next
-
-| You want to...                    | Go here                           |
-| --------------------------------- | --------------------------------- |
-| Higher performance virtualization | [QEMU/KVM Setup](Qemu.md)         |
-| Tune your VM after setup          | [VM Quality of Life](QOL-VM.md)   |
-| Browse the full security toolkit  | [General Security Tools](GeneralSecurity-Tools.md) |
