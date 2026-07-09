@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Set-Up/Arch-QOL.md",
+                "file": "languages/Languages.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Arch-QOL"
+              "title": "Languages"
             }
           }
         ]
@@ -141,20 +141,20 @@
   },
   "active": "93d231a4274a8bde",
   "lastOpenFiles": [
+    "Arch/Qemu.md",
+    "Arch/Docker.md",
+    "Set-Up/Arch-QOL.md",
+    "Arch/VirtualBox.md",
+    "2. Tips for VM.md",
+    "1. WorkSpace.md",
     "linux/History.md",
     "linux/README.md",
     "languages/Languages.md",
     "languages/README.md",
-    "Arch/VirtualBox.md",
-    "Arch/Docker.md",
-    "Arch/Qemu.md",
     "Set-Up/BlueTeam-Tools.md",
-    "2. Tips for VM.md",
     "Set-Up/GPG.md",
     "Set-Up/GeneralSecurity-Tools.md",
     "Set-Up/BackUps.md",
-    "Set-Up/Arch-QOL.md",
-    "1. WorkSpace.md",
     "Set-Up/Targets.md",
     "Arch",
     "Untitled.md",
