@@ -160,13 +160,3 @@ docker run --rm --net host --pid host --userns host --cap-add audit_control \
 | Damn Vulnerable Docker | Container security       | Intermediate            |
 | Kubernetes Goat        | Kubernetes security      | Intermediate → Advanced |
 | Docker Bench           | Hardening audit          | All levels              |
-
----
-
-## What to Read Next
-
-| You want to...                              | Go here                             |
-| ------------------------------------------- | ----------------------------------- |
-| Offensive tools for attacking these targets | [Red Team Tools](RedTeam-Tools.md)  |
-| Tune your Arch host                         | [Arch Quality of Life](Arch-QOL.md) |
-| Back up your lab                            | [Backups](BackUps.md)               |

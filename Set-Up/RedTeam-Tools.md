@@ -51,13 +51,3 @@
 | `winpeas`  | Windows privilege escalation enumeration | [GitHub](https://github.com/carlospolop/PEASS-ng) |
 | `mimikatz` | Windows credential dumping               | [GitHub](https://github.com/gentilkiwi/mimikatz)  |
 | `Rubeus`   | Kerberos manipulation                    | [GitHub](https://github.com/GhostPack/Rubeus)     |
-
----
-
-## Related Guides
-
-|                               | Guide                                              |
-| ----------------------------- | -------------------------------------------------- |
-| Defensive tooling             | [Blue Team Tools](BlueTeam-Tools.md)               |
-| Run attack labs in containers | [Docker Setup](Docker.md)                          |
-| Full tool reference           | [General Security Tools](GeneralSecurity-Tools.md) |

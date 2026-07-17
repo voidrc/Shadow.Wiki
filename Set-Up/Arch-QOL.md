@@ -268,13 +268,3 @@ return {
 ```
 
 > Requires a **Nerd Font** installed (e.g., `JetBrainsMono Nerd Font`) for icons to render correctly.
-
----
-
-## What to Read Next
-
-| You want to...            | Go here                         |
-| ------------------------- | ------------------------------- |
-| Encrypt files and backups | [GPG](GPG.md)                   |
-| Back up your setup        | [Backups](BackUps.md)           |
-| Tune your VM              | [VM Quality of Life](2.%20Tips%20for%20VM.md) |
