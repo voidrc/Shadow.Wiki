@@ -12,7 +12,6 @@ Shadow.Lab operates in the **Grey Hat** space — skilled researchers who unders
 
 - **Understand both sides** — the best defenders think like attackers; the best attackers understand defenses
 - **Responsible disclosure** — report vulnerabilities through proper channels; do not cause harm
-- **Authorised scope only** — never test systems you do not have explicit written permission to test
 - **Document everything** — reproducible findings, clear timelines, and clean write-ups matter
 - **Continuous learning** — the threat landscape evolves; so must you
 - **Operate ethically** — Grey Hat does not mean lawless; it means deeply informed
