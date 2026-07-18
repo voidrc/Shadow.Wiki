@@ -2,6 +2,8 @@
 
 Quality of life tips for VM users. This tips considers you installed Kali in VM.
 
+> **Note**: These tips are for people who know what they are doing and have a basic understanding of Linux.
+
 ---
 ### GRUB Timeout
 

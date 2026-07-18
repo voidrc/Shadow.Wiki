@@ -2,7 +2,7 @@
 
 > _See. Understand. Control._
 
-A comprehensive knowledge base for the **Shadow.Lab** security research team. This repo is the single source of truth for techniques, tools, and resources across **Red Teaming**, **Blue Teaming**, and the foundational disciplines that underpin them.
+A comprehensive knowledge base for the **Shadow.Lab** security research team and anyone interested in cybersecurity. This repo is the single source of truth for techniques, tools, and resources across **Red Teaming**, **Blue Teaming**, and the foundational disciplines that underpin them.
 
 Shadow.Lab operates in the **Grey Hat** space — skilled researchers who understand both sides of the fence: how attackers think and operate, and how defenders detect, respond, and harden systems.
 
