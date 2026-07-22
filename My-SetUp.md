@@ -7,70 +7,45 @@
 
 ---
 
-## 1. Medusa storage layout — separate drive for VMs, Steam, containers
+## 1. Software — per device
 
-Second SSD, btrfs, mounted via fstab (`compress=zstd`) — keeps VM images, Steam library, and container data off the boot drive.
-
-### Format the Drive
-```bash
-sudo mkfs.btrfs -f /dev/sdX
-```
-
-### Mount
-```bash
-sudo mkdir -p /media/$USER
-sudo mount /dev/sdX /media/$USER
-sudo chown $USER:$USER /media/$USER
-```
-
-### Persist in fstab
-```bash
-lsblk -f /dev/sdX   # get the UUID
-UUID=<UUID>  /media/<youruser>  btrfs  defaults,noatime,compress=zstd  0  2
-```
-
-### Docker
-```bash
-sudo systemctl stop docker
-sudo rsync -aHAX /var/lib/docker/ /media/$USER/docker/
-sudo mv /var/lib/docker /var/lib/docker.bak
-# /etc/docker/daemon.json → {"data-root": "/media/$USER/docker"}
-sudo systemctl start docker
-docker info | grep "Docker Root Dir"   # confirm before deleting the .bak
-```
-
-### Podman (rootless)
-```toml
-[storage]
-driver = "overlay"
-graphroot = "/media/$USER/podman/storage"
-runroot = "/run/user/1000/containers"
-```
-
----
-
-## 2. Software — per device
-
-- **Medusa:** —
-- **Aqua:** —
-- **Android:** —
+- **Medusa:** 
+  - [VirtualBox](./Guides/VirtualBox.md)
+  - Zed
+  - Ranger
+  - Podman
+  - Podman-Desktop
+  - Docker
+  - Docker-Compose
+  - LazyDocker
+  - Zathura
+  - TailScale
+  - LocalSend
+  - Obs-Studio
+  - Btop
+- **Aqua:** 
+  - TailScale
+  - Zed
+  - OrbStack
+  - LocalSend
+  - Gimp
+  - Davinci Resolve
+  - Obs-Studio
+- **Android:** 
+  - TailScale
+  - LocalSend
+  - F-Droid
+  - Termux
+    - Tmux
+    - OpenSSH
 
 ---
 
 ## 3. Network layer: Tailscale
 
-### Install
-
-- **Aqua:** standalone Tailscale Mac app
-- **Android:** Play Store — connected
-- **Medusa:** 
-```bash
-sudo pacman -S tailscale && sudo systemctl enable --now tailscaled && sudo tailscale up
-```
-
 ### Core config
 - **MagicDNS:** on (admin console → DNS) — reach Medusa as `medusa`, no raw 100.x IP needed
-- **Key expiry:** disabled for **Medusa only** (admin console → Machines → Medusa). Aqua and Android keep normal expiry on purpose — if either is ever lost, its tailnet access should lapse on its own.
+- **Key expiry:** disabled for **Medusa only**.
 
 ### Tailscale SSH (no per-device key management)
 Enable on Medusa without disrupting anything running:
@@ -95,8 +70,7 @@ Swap `you@example.com` for your real Tailscale login. Result: `ssh vincenzo@medu
 ## 4. Per-device access
 
 ### Android (Termux) — connected
-- Install Termux from **F-Droid** (Play Store build is stale), then: `pkg install openssh tmux`
-- On Medusa side: `lazydocker` and `btop` installed; `tmux new -s home` gives a persistent session — lock the phone, lose signal, reattach later with `tmux attach -t home` and everything's still running.
+- On Medusa side: `tmux new -s home` gives a persistent session — lock the phone, lose signal, reattach later with `tmux attach -t home` and everything's still running.
 - Same session works for `VBoxManage` too.
 
 ### Aqua — SSH config + Zed remote dev + deployment
@@ -107,18 +81,6 @@ Host medusa
     User $USER
 ```
 - **Zed remote dev:** command palette → remote-projects action → "Connect New Server" → `medusa` (needs Zed 0.159+). UI stays local on Aqua; language servers/terminal/tasks run on Medusa.
-- **Deployment** — point tooling at Medusa directly instead of building locally:
-```bash
-# Podman
-podman system connection add medusa ssh://vincenzo@medusa/run/user/1000/podman/podman.sock
-podman --connection medusa compose up -d
-
-# Docker
-docker context create medusa --docker "host=ssh://vincenzo@medusa"
-docker context use medusa
-docker compose up -d --build
-```
-No `--identity`/keys needed — Tailscale SSH handles auth. Building against the remote context also avoids cross-compiling amd64 on Aqua's Apple Silicon.
 
 ---
 
