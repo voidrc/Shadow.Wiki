@@ -177,9 +177,7 @@ VBoxManage startvm kali --type headless
 VBoxManage controlvm kali poweroff
 ```
 
-### Graphical console: VRDE
-
-VirtualBox's equivalent of a VNC/SPICE console is **VRDE** (VirtualBox Remote Desktop Extension) — RDP-based, works with any standard RDP client. Requires the Extension Pack (separate download from base VirtualBox, free for personal use).
+### Graphical console: VNC
 
 Per VM, on Medusa:
 
@@ -191,6 +189,6 @@ VBoxManage modifyvm parrot-htb --vrde on --vrde-port 3391 --vrdeaddress <medusa-
 
 Get Medusa's Tailscale IP with `tailscale ip -4`. The bind address wants a literal IP; connecting _from_ Aqua can still use `medusa:3390` via MagicDNS.
 
-On Aqua: **Windows App** (Microsoft's Remote Desktop client, Mac App Store) → add PC → `medusa:3390`.
+On Aqua: use a **VNC client** — macOS Screen Sharing, RealVNC Viewer, or TigerVNC. Connect to `vnc://medusa:3390` (Screen Sharing) or `medusa:3390`. No password is needed — VRDE auth is `null`.
 
 Tighter alternative: bind VRDE to `127.0.0.1` instead and SSH-tunnel it (`ssh -L 3390:localhost:3390 medusa`) rather than binding straight to the Tailscale interface.
