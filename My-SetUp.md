@@ -189,6 +189,6 @@ VBoxManage modifyvm parrot-htb --vrde on --vrde-port 3391 --vrdeaddress <medusa-
 
 Get Medusa's Tailscale IP with `tailscale ip -4`. The bind address wants a literal IP; connecting _from_ Aqua can still use `medusa:3390` via MagicDNS.
 
-On Aqua: use a **VNC client** — macOS Screen Sharing, RealVNC Viewer, or TigerVNC. Connect to `vnc://medusa:3390` (Screen Sharing) or `medusa:3390`. No password is needed — VRDE auth is `null`.
+On Aqua: use a **VNC client** — macOS Screen Sharing, RealVNC Viewer, or TigerVNC. Connect to `vnc://medusa:3390` (Screen Sharing) or `medusa:3390`. macOS Screen Sharing requires a password, so set one on Medusa with `vboxmanage controlvm kali vrdeproperty VNCPassword=<password>` and enter it in the client.
 
 Tighter alternative: bind VRDE to `127.0.0.1` instead and SSH-tunnel it (`ssh -L 3390:localhost:3390 medusa`) rather than binding straight to the Tailscale interface.
