@@ -1,4 +1,7 @@
 {
   "cssTheme": "Tokyo Night Storm",
-  "showRibbon": true
+  "showRibbon": true,
+  "enabledCssSnippets": [
+    "noctalia"
+  ]
 }
